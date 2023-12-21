@@ -1,0 +1,155 @@
+html {
+    height: 100%;
+    background: linear-gradient(#050078, #0027ca, white);
+    background-repeat: no-repeat;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+img {
+    position: absolute;
+    width: 20%;
+    margin-top: -10%;
+    margin-left: 10%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: auto;
+}
+
+.container {
+  overflow: auto;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 1.5em;
+    animation: fadeIn 2s forwards; /* Animation d'apparition du texte */
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+/* css des bouttons */
+.button {
+    width: 25%; /* Ajustez la largeur en fonction de l'écran */
+    padding: 2%;
+    background-color: #333dff;
+    color: #339cff;
+    border: none;
+     margin-left: 15%; /* Ajustez la marge en fonction de l'écran */
+    /*margin-top: 20%; /* Ajustez la marge en fonction de l'écran */ */
+    position : relative;
+    font-size: 1.5em;
+    animation: fadeIn 2s forwards 2s;
+}
+
+.button:hover {
+    background-color: #339cff;
+    color: #333dff;
+}
+
+.buttons {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    margin-top:30%;
+    margin-left: -20%;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+a {
+    display: inline-block;
+    margin: 0 5px; /* Ajustez la marge en fonction de l'écran */
+    padding: 5px 10px; /* Ajustez le rembourrage en fonction de l'écran */
+    background-color: #fff;
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+/* creation d'une chute de neige*/
+
+.gift-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.gift {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%; /* Rend le carré un cercle */
+    position: absolute;
+    animation: fallAnimation 5s linear infinite; /* Ajustez la durée et l'animation */
+    transform-origin: top center;
+}
+
+@keyframes fallAnimation {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+
+
+
+
+
+
+/*****css page details cadeau***/
+
+
+/* Règles de média query pour les petits écrans */
+@media only screen and (max-width:600px) {
+
+  img {
+      position: absolute;
+      width: 20%;
+      margin-top: -20%;
+      margin-bottom: 20%;
+      margin-left: 40%;
+  }
+  .buttons {
+      margin-top: 105%;
+      margin-left: 0;
+  }
+
+  .button {
+      width: 80%;
+      margin-top: 7%;
+      margin-left: 0;
+  }
+
+
+
+}
